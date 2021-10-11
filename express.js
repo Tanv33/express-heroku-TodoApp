@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const Port = process.env.Port || 5000;
+const PORT = process.env.PORT || 5000;
 const path = require("path");
 
 app.use("/", express.static(path.join(__dirname, "web/build")));
@@ -37,6 +37,6 @@ app.get("/**", (req, res) =>
 //     res.sendFile(path.join(__dirname, "web/build/index.html"))
 // );
 
-app.listen(Port, () =>
-    console.log(`Example app listening on port port! http://localhost:${Port}`)
+app.listen(PORT, () =>
+    console.log(`Example app listening on port port! http://localhost:${PORT}`)
 );
